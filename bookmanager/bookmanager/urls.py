@@ -21,7 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path(路由，视图函数名)
     # path('index/',index),
-    # 网页访问的话需要工程(bookmanager)的路由加上子应用(book)的路由,所以我们这里把工程的路由设为空
-    # 所以后面只需要在子应用的urls里设置路由
+    # 网页访问的话需要工程(bookmanager)的路由加上子应用(book)的路由,
+    # 我们这里把工程的路由设为空,所以网页访问时只需要根据子应用的路由访问
+    # 后面我们只需要在子应用的urls里设置路由
+
     path('', include('book.urls'))
 ]

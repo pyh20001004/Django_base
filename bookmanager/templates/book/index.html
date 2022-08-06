@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <li>西游记</li>
+        <li>三国演义</li>
+    </ul>
+    <ul>
+        <li>{{ n1 }}</li>
+    </ul>
+    <ul>
+        <li>{{ n2.name }}</li>
+    </ul>
+    <ul>
+        <li>{{ n3.0 }}</li>
+        <li>{{ n3.1 }}</li>
+        <li>{{ n3.2 }}</li>
+    </ul>
+    <ul>
+        <li>{{ n4.name }}</li>
+        <li>{{ n4.salary }}</li>
+        <li>{{ n4.role }}</li>
+    </ul>
+    <ul>
+        <li>{{ n5.0.name }}</li>
+        <li>{{ n5.1.salary }}</li>
+        <li>{{ n5.2.role }}</li>
+    </ul>
+
+{#循环遍历获取#}
+<div>
+    {% for item in n3 %}
+        <span>{{ item }}</span>
+    {% endfor %}
+</div>
+
+<ul>
+    {% for k,v in n4.items %}
+        <li>{{ k }} = {{ v }} </li>
+    {% endfor %}
+</ul>
+
+{% for item in n5 %}
+    <div>{{ item.name }} {{ item.salary }} {{ item.role }}</div>
+{% endfor %}
+
+</body>
+</html>
