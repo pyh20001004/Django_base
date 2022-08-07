@@ -15,10 +15,7 @@ from django.http import HttpResponse
 # 我们期望用户输入 http://127.0.0.1:8000/index/
 # 来访问视图函数
 
-# 在settings.py的TEMPLATES中有 'DIRS': [os.path.join(BASE_DIR,'templates')], 的时候
-#     优先去项目根目录的templates中寻找(提前先配置: [os.path.join(BASE_DIR,'templates')])[不配置就是无效]
-# 在settings.py的TEMPLATES中 'DIRS': [], 的时候
-#     根据APP的注册顺序，在每个APP下的templates目录中寻找user_list.html文件
+
 def index(request):
     # return  HttpResponse('ok')
 
@@ -40,4 +37,8 @@ def index(request):
         {"name": "bbb", "salary": 22222, 'role': "CTO2"},
         {"name": "ccc", "salary": 33333, 'role': "CTO3"},
     ]
-    return render(request,'book/index.html',{'n1':name,'n2':context,'n3':roles,'n4':user_info,'n5':data_list})
+    # 在settings.py的TEMPLATES中有 'DIRS': [os.path.join(BASE_DIR,'templates')], 的时候
+    #     优先去项目根目录的templates中寻找(提前先配置: [os.path.join(BASE_DIR,'templates')])[不配置就是无效]
+    # 在settings.py的TEMPLATES中 'DIRS': [], 的时候
+    #     根据APP的注册顺序，在每个APP下的templates目录中寻找user_list.html文件
+    return render(request,'index.html',{'n1':name,'n2':context,'n3':roles,'n4':user_info,'n5':data_list})

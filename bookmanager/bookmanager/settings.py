@@ -23,10 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'rrc&zela3mz4ky^$o9b%!5hxew*a#&4$3lpbncgmoo_87o*bvw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 调试模式
+# 在我们开发的时候，我们需要看到更多的信息，所以要开启debug模式
+# 当我们的程序上线之后，就改为False
 DEBUG = True
-
 # 允许以什么样的形式来访问我们的项目 默认是 127.0.0.1
-ALLOWED_HOSTS = []
+# * 的意思是可以使用ip也可以使用127
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -59,7 +62,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         #告知系统，我们的模板文件放在哪里
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        # 'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS':[],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,3 +128,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# STATICFILES_DIRS告诉django,首先到STATICFILES_DIRS(根目录的static)里面寻找静态文件,
+# 其次再到各个app的static文件夹里面找(注意, django查找静态文件是惰性查找,查找到第一个,就停止查找了)
+#告知系统 我们的图片在哪里
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static'),
+]
