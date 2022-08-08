@@ -3,5 +3,5 @@ from book.views import index
 # 这个是固定写法 urlpatterns = []
 urlpatterns = [
     # path(路由，视图函数名)
-    path('home/', index),
+    path('index/', index),
 ]
