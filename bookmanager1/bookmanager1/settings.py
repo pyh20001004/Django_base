@@ -23,9 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%tdk=@gg3z1z%2ulz*uw4m4ta%^cy(x%jl2j%dk@yem@+4d6=9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 调试模式
+# 在我们开发的时候，我们需要看到更多的信息，所以要开启debug模式
+# 当我们的程序上线之后，就改为False
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 允许以什么样的形式来访问我们的项目 默认是 127.0.0.1
+# * 的意思是可以使用ip也可以使用127
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -52,9 +57,16 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bookmanager1.urls'
 
+
+#模板配置相关
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        #告知系统，我们的模板文件放在哪里
+        # 设置'DIRS': [os.path.join(BASE_DIR,'templates')], 的时候
+        #     优先去项目根目录的templates中寻找html(提前先配置: [os.path.join(BASE_DIR,'templates')])[不配置就是无效]
+        # 设置 'DIRS': [], 的时候
+        #     根据APP的注册顺序，在每个APP下的templates目录中寻找html文件
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -74,10 +86,15 @@ WSGI_APPLICATION = 'bookmanager1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# 设置数据库
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE':'django.db.backends.mysql',
+        'HOST': '127.0.0.1',  # 数据库主机
+        'PORT': 3306,  # 数据库端口
+        'USER': 'root',  # 数据库用户名
+        'PASSWORD': 'pyh20001004',  # 数据库用户密码
+        'NAME': 'pyh_Django_base_book'  # 数据库名字
     }
 }
 
@@ -104,9 +121,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+#设置语言
+LANGUAGE_CODE = 'zh-Hans'#'en-us'
+#设置时区
+TIME_ZONE = 'Asia/Shanghai'#'UTC'
 
 USE_I18N = True
 
@@ -119,3 +137,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# STATICFILES_DIRS告诉django,首先到STATICFILES_DIRS(根目录的static)里面寻找静态文件,
+# 其次再到各个app的static文件夹里面找(注意, django查找静态文件是惰性查找,查找到第一个,就停止查找了)
+#告知系统 我们的图片在哪里
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static'),
+]
