@@ -1,11 +1,13 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 
 from book.models import BookInfo
-def index(request):
 
-    #再这里实现 增删改查
+
+def index(request):
+    # 再这里实现 增删改查
+
     # [book.id for book in BookInfo.objects.all()]
     # [book.id for book in BookInfo.objects.all()]
     # [book.id for book in BookInfo.objects.all()]
@@ -31,11 +33,9 @@ def index(request):
 from book.models import BookInfo
 from book.models import PeopleInfo
 
-
-
 ####################增加数据########################
 # 方式一
-book=BookInfo(
+book = BookInfo(
     name='Django',
     pub_date='2000-1-1',
     readcount=10
@@ -53,54 +53,49 @@ BookInfo.objects.create(
 # 直接将数据保存到了数据库中
 
 
-
 ####################修改数据########################
 # 方式1
 # select * from bookinfo where id=6
-book=BookInfo.objects.get(id=6)
-book.name='运维开发入门'
+book = BookInfo.objects.get(id=6)
+book.name = '运维开发入门'
 # 想要保存数据 需要调用 对象的save方法
 book.save()
 
 # 方式二
 # filter 过滤
-BookInfo.objects.filter(id=6).update(name='爬虫入门',commentcount=666)
+BookInfo.objects.filter(id=6).update(name='爬虫入门', commentcount=666)
 # 错误的
 # BookInfo.objects.get(id=5).update(name='5555',commentcount=999)
 
 
-
 ####################删除数据########################
 # 删除分两种:
-    # 物理删除(这条记录的数据 删除)
-    # 逻辑删除(修改标记位 例如 is_delete=False)
+# 物理删除(这条记录的数据 删除)
+# 逻辑删除(修改标记位 例如 is_delete=False)
 # 方式1
-book=BookInfo.objects.get(id=6)
+book = BookInfo.objects.get(id=6)
 book.delete()
 
 # 方式2
 BookInfo.objects.get(id=6).delete()
 BookInfo.objects.filter(id=5).delete()
 
-
-
 ####################查询数据########################
 # get查询单一结果，如果不存在会抛出模型类.DoesNotExist异常
 try:
-    book=BookInfo.objects.get(id=1)
+    book = BookInfo.objects.get(id=1)
 except BookInfo.DoesNotExist:
     print('查询结果不存在')
 
 # all查询多个结果
 BookInfo.objects.all()
 from book.models import PeopleInfo
+
 PeopleInfo.objects.all()
 
 # count查询结果数量
 BookInfo.objects.all().count()
 BookInfo.objects.count()
-
-
 
 ###########################过滤查询##########################
 # 实现SQL中的where功能，包括
@@ -132,9 +127,9 @@ BookInfo.objects.count()
 #         year、month、day、week_day、hour、minute、second：对日期时间类型的属性进行运算
 
 # 查询编号为1的图书
-book=BookInfo.objects.get(id=1)         #简写形式 （属性名=值）
+book = BookInfo.objects.get(id=1)  # 简写形式 （属性名=值）
 # exact：表示判等
-book=BookInfo.objects.get(id__exact=1)  #完整形式  (id__exact=1)
+book = BookInfo.objects.get(id__exact=1)  # 完整形式  (id__exact=1)
 # pk primary key 主键
 BookInfo.objects.get(pk=1)
 BookInfo.objects.get(id=1)
@@ -154,7 +149,7 @@ BookInfo.objects.filter(name__isnull=True)
 
 # 查询编号为1或3或5的图书
 # in：是否包含在范围内
-BookInfo.objects.filter(id__in=[1,3,5])
+BookInfo.objects.filter(id__in=[1, 3, 5])
 
 # 查询编号大于3的图
 # gt大于 (greater then)
@@ -177,28 +172,22 @@ BookInfo.objects.filter(pub_date__gt='1990-1-1')
 # BookInfo.objects.filter(pub_date__gt='199011')
 
 
-
 ###########################F对象##############################
 # 导入F对象
 from django.db.models import F
 
 # 使用： 2个属性的比较
-#语法形式： 以filter为例  模型类名.objects.filter(属性名__运算符=F('第二个属性名'))
+# 语法形式： 以filter为例  模型类名.objects.filter(属性名__运算符=F('第二个属性名'))
 
 # 查询阅读量大于等于评论量的图书
 BookInfo.objects.filter(readcount__gte=F('commentcount'))
-
-
 
 #########################并且查询#############################
 # 并且查询
 # 查询阅读量大于20，并且编号小于3的图书。
 BookInfo.objects.filter(readcount__gt=20).filter(id__lt=3)
 # 两种方式一致
-BookInfo.objects.filter(readcount__gt=20,id__lt=3)
-
-
-
+BookInfo.objects.filter(readcount__gt=20, id__lt=3)
 
 ###########################Q对象##############################
 # 导入Q对象
@@ -210,28 +199,60 @@ from django.db.models import Q
 # not 非 语法：  模型类名.objects.filter(～Q(属性名__运算符=值))
 
 # 查询阅读量大于20，或者编号小于3的图书。
-BookInfo.objects.filter(Q(readcount__gt=20)|Q(id__lt=3))
+BookInfo.objects.filter(Q(readcount__gt=20) | Q(id__lt=3))
 
 # 查询编号不等于3的书籍
 BookInfo.objects.exclude(id=3)
 BookInfo.objects.filter(~Q(id=3))
 
-
-
 #############聚合函数#####################################
 
-from django.db.models import Sum,Max,Min,Avg,Count
+from django.db.models import Sum, Max, Min, Avg, Count
 
 # 模型类名.objects.aggregate(Xxx('字段名'))
-
 BookInfo.objects.aggregate(Sum('readcount'))
 
-
-###############排序############################
+#########################排序############################
 BookInfo.objects.all().order_by('readcount')
 
 
 
+###################2个表的级联操作##############################
+# 查询书籍为1的所有人物信息
+# 先获取了id为1的书籍
+book = BookInfo.objects.get(id=1)
+# 1对多的关系模型中
+# 系统会为我们自动添加一个关联模型 类名小写_set
+# 再获取所有信息
+book.peopleinfo_set.all()
+
+# 查询人物为1的书籍信息
+person = PeopleInfo.objects.get(id=1)
+# PeopleInfo中设置了外键book就可以直接通过下面方式查询
+person.book.name
+person.book.pub_date
+person.book.readcount
+person.book.commentcount
+person.book.is_delete
 
 
 
+###############关联过滤查询#####################
+# 语法形式
+# 查询1的数据， 条件为 n
+# 模型类名.objects.filter(关联模型类名小写__字段名__运算符=值)
+
+# 查询图书，要求图书人物为"郭靖"
+BookInfo.objects.filter(peopleinfo__name__exact='郭靖')
+BookInfo.objects.filter(peopleinfo__name='郭靖')
+
+# 查询图书，要求图书中人物的描述包含"八"
+BookInfo.objects.filter(peopleinfo__description__contains='八')
+
+# 查询书名为“天龙八部”的所有人物
+# PeopleInfo中有与书名相关的book外键,所以直接用book
+PeopleInfo.objects.filter(book__name='天龙八部')
+PeopleInfo.objects.filter(book__name__exact='天龙八部')
+
+# 查询图书阅读量大于30的所有人物
+PeopleInfo.objects.filter(book__readcount__gt=30)
