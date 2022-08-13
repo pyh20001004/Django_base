@@ -33,10 +33,10 @@ def shop(request,city_id,mobile):
     # 方法二: 在urls.py里
 
 
-    # 1.URL路径参数
+    ########### 1.URL路径参数 ###########
     # print(city_id,mobile)
 
-    # 2.查询字符串参数
+    ########### 2.查询字符串参数 ###########
     query_params=request.GET
     # print(query_params)
     # <QueryDict: {'a': ['333', '444'], 'b': ['555']}>
@@ -90,12 +90,13 @@ def register(request):
 
 
 ########### 3.2 非表单类型 非表单类型 Non-Form Data ###########
-    """
-    非表单类型的请求体数据，Django无法自动解析，
-    可以通过request.body属性获取最原始的请求体数据，
-    自己按照请求体格式（JSON、XML等）进行解析。
-    request.body返回bytes类型。
-    """
+"""
+非表单类型的请求体数据，Django无法自动解析，
+可以通过request.body属性获取最原始的请求体数据，
+自己按照请求体格式（JSON、XML等）进行解析。
+request.body返回bytes类型。
+"""
+
 def json(request):
     # json数据不能通过 request.POST获取数据,要使用request.body
     body=request.body
@@ -274,12 +275,13 @@ Cookie的特点
 
 
 """
-第一次请求，携带 查询字符串
-http://127.0.0.1:8000/set_cookie/?username=itcast&password=123
-服务器接收到请求之后，获取username.服务器设置cookie信息，cookie信息包括 username
-浏览器接收到服务器的响应之后，应该把cookie保存起来
-
-第二次及其之后的请求，我们访问http://127.0.0.1:8000 都会携带cookie信息。 服务器就可以读取cookie信息，来判断用户身份
+Cookie流程:
+    第一次请求，携带 查询字符串
+    http://127.0.0.1:8000/set_cookie/?username=itcast&password=123
+    服务器接收到请求之后，获取username.服务器设置cookie信息，cookie信息包括 username
+    浏览器接收到服务器的响应之后，应该把cookie保存起来
+    
+    第二次及其之后的请求，我们访问http://127.0.0.1:8000 都会携带cookie信息。 服务器就可以读取cookie信息，来判断用户身份
 """
 def set_cookie(request):
     # 获取查询字符串数据
@@ -290,7 +292,7 @@ def set_cookie(request):
     # 可以通过HttpResponse对象中的set_cookie方法来设置cookie。
     response=HttpResponse('set_cookie')
     # key, value=''
-    # max_age 设置过期时间 是一个秒数 从响应开始 计数的一个秒数
+    # max_age 设置Cookie过期时间 是一个秒数 从响应开始 计数的一个秒数
     response.set_cookie('name', username, max_age=60 * 60)
     response.set_cookie('password', password)
 
@@ -309,3 +311,103 @@ def get_cookie(request):
     password = request.COOKIES.get('password')
 
     return HttpResponse(name+"-----"+password)
+
+
+########### 1.Session ###########
+"""
+session 是保存在服务器端 -- 数据相对安全
+session需要依赖于cookie
+"""
+
+########### 1.Session ###########
+"""
+Session流程:
+    第一次请求 http://127.0.0.1:8000/set_session/?username=itheima 。我们在服务器端设置sesison信息
+    服务器同时会生成一个sessionid的cookie信息。
+    浏览器接收到这个信息之后，会把cookie数据保存起来
+    
+    第二次及其之后的请求 都会携带这个cookie里的sessionid. 服务器会验证这个sessionid. 验证没有问题会读取相关数据。实现业务逻辑
+"""
+def set_session(request):
+    # 1.模拟 获取用户信息
+    username=request.GET.get('username')
+    # 2.设置session信息
+    # 假如 我们通过模型查询 查询到了 用户的信息
+
+    request.session['user_id']=1
+    request.session['username']=username
+
+    # clear 删除session里的数据，但是 key有保留
+    # request.session.clear()
+
+    # flush 是删除所有的数据，包括key
+    # request.session.flush()
+
+    # 删除session中的指定键及值，在存储中只删除某个键及对应的值。
+    # del request.session['键']
+
+    # 设置session的有效期
+    # request.session.set_expiry(3600)
+
+    return HttpResponse('set_session')
+
+
+def get_session(request):
+
+    # user_id=request.session['user_id']
+    # username=request.session['username']
+    # 获取字典的时候尽量使用get,能够减少异常的发生
+    user_id=request.session.get('user_id')
+    username=request.session.get('username')
+
+    content= '{},{}'.format(user_id,username)   # 相当于'%s,%s'%user_id,%username
+
+    return HttpResponse(content)
+
+
+########### 2.存储方式 ###########
+"""
+在settings.py文件中，可以设置session数据的存储方式，可以保存在数据库、本地缓存等。
+2.1 数据库
+    存储在数据库中，如下设置可以写，也可以不写，这是默认存储方式。
+2.2 本地缓存
+    存储在本机内存中，如果丢失则不能找回，比数据库的方式读写更快。
+2.3 混合存储
+    优先从本机内存中存取，如果没有则从数据库中存取。
+2.4 Redis(在settings.py中配置)
+在redis中保存session，需要引入第三方扩展，我们可以使用django-redis来解决。
+"""
+
+########### 3.Session操作 ###########
+"""
+1）以键值对的格式写session。
+    request.session['键']=值
+2) 根据键读取值。
+    request.session.get('键',默认值)
+3）清除所有session，在存储中删除值部分。
+    request.session.clear()
+4）清除session数据，在存储中删除session的整条数据。
+    request.session.flush()
+5）删除session中的指定键及值，在存储中只删除某个键及对应的值。
+    del request.session['键']
+6）设置session的有效期
+    request.session.set_expiry(value)
+    如果value是一个整数，session将在value秒没有活动后过期。
+    如果value为0，那么用户session的Cookie将在用户的浏览器关闭时过期。
+    如果value为None，那么session有效期将采用系统默认值， 默认为两周，可以通过在settings.py中设置SESSION_COOKIE_AGE来设置全局默认值。
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

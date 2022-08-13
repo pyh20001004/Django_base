@@ -1,6 +1,6 @@
 from django.urls import path
 from book.views import home,create_book,shop,register,json,method,response
-from book.views import set_cookie,get_cookie
+from book.views import set_cookie,get_cookie,set_session,get_session
 
 from django.urls import converters
 from django.urls.converters import register_converter
@@ -44,6 +44,8 @@ urlpatterns = [
     path('res/',response),
     path('set_cookie/',set_cookie),
     path('get_cookie/',get_cookie),
+    path('set_session/',set_session),
+    path('get_session/',get_session),
 ]
 
 """
