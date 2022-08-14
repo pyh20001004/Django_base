@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="62987105-1fd7-4b81-884b-7313a448d791" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/../bookmanage2/book/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/.idea/bookmanager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/.idea/bookmanager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/static/img/1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/static/img/1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/static/img/2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/static/img/2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/static/img/3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/static/img/3.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/static/img/4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/static/img/4.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/static/img/5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/static/img/5.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/static/img/6.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/static/img/6.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/static/img/7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/static/img/7.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/static/img/8.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/static/img/8.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/book/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/bookmanager/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/bookmanage/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/bookmanager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/bookmanage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/bookmanager/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/bookmanage/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/static/img/1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/static/img/1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager/templates/book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage/templates/book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/.idea/bookmanager1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bookmanager1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/book/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/book/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/book/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/book/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/book/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/book/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/book/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/bookmanager1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmanage1/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/bookmanager1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmanage1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/bookmanager1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmanage1/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/bookmanager1/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmanage1/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager1/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/.idea/bookmanage2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/.idea/bookmanage2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/book/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/book/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/book/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/person/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/book/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/book/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/book/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/book/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/book/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/book/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/book/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/book/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/book/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/book/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/book/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/book/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/bookmanager2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/bookmanage2/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/bookmanager2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/bookmanage2/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/bookmanager2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/bookmanage2/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/bookmanager2/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/bookmanage2/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/person/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/person/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/person/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/person/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/person/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/person/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/person/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/person/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/person/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/person/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/person/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookmanager2/person/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bookmanage2/person/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JupyterTrust" id="52a91039-2c71-44d0-affe-efb4cf04301b" />
+  <component name="ProjectId" id="2D1QZvKMXKYEcIKwElWLK6zl7kV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="新增" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="bookmanage1" type="Python.DjangoServer" factoryName="Django server">
+      <module name="bookmanager1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="bookmanage1.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/py3_pyh_Django_1/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62987105-1fd7-4b81-884b-7313a448d791" name="默认的" comment="" />
+      <created>1659864170164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659864170164</updated>
+      <workItem from="1659864171371" duration="2731000" />
+      <workItem from="1659922078232" duration="7039000" />
+      <workItem from="1659940416318" duration="10977000" />
+      <workItem from="1660008769147" duration="7042000" />
+      <workItem from="1660390877779" duration="21000" />
+      <workItem from="1660465224915" duration="46000" />
+      <workItem from="1660465365317" duration="52000" />
+      <workItem from="1660465728612" duration="670000" />
+      <workItem from="1660466494553" duration="26000" />
+      <workItem from="1660466541942" duration="25000" />
+      <workItem from="1660466649764" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="433" y="131" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1660466676160">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="433" y="131" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1660466676160" />
+    <state width="1487" height="207" key="GridCell.Tab.0.bottom" timestamp="1660466398729">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1487" height="207" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1660466398729" />
+    <state width="1487" height="207" key="GridCell.Tab.0.center" timestamp="1660466398728">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1487" height="207" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1660466398728" />
+    <state width="1487" height="207" key="GridCell.Tab.0.left" timestamp="1660466398727">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1487" height="207" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1660466398727" />
+    <state width="1487" height="207" key="GridCell.Tab.0.right" timestamp="1660466398729">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1487" height="207" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1660466398729" />
+    <state x="484" y="161" width="1037" height="737" key="SettingsEditor" timestamp="1660466680954">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="484" y="161" width="1037" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1660466680953" />
+  </component>
+</project>
